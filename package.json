@@ -6,10 +6,18 @@
   "scripts": {
     "dev": "json-server --watch db.json --port 3000"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thiagoow/API-JsonServer-ToDoList-ThiagoSilvaLopes.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Thiago Silva Lopes",
   "license": "ISC",
-  "devDependencies": {
+  "bugs": {
+    "url": "https://github.com/Thiagoow/API-JsonServer-ToDoList-ThiagoSilvaLopes/issues"
+  },
+  "homepage": "https://github.com/Thiagoow/API-JsonServer-ToDoList-ThiagoSilvaLopes#readme",
+  "dependencies": {
     "json-server": "^0.16.3"
   }
 }

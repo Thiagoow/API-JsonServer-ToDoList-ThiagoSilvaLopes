@@ -14,7 +14,7 @@ as requisições.
 ----------5º Executamos o JsonServer na nossa dB com o comando:
     json-server --watch NomeDaSuaDb.json
 
-----------6º Trocamos o "test" no objeto de "scrips" do package.json, pra:
+----------6º Trocamos o "test" no objeto de "scripts" do package.json, pra:
     "dev": "json-server --watch NomeDaSuaDb.json --port 3000"
 
 ----------7º Adicionamos um server.js na pasta raiz com o código (DENTRO das aspas):

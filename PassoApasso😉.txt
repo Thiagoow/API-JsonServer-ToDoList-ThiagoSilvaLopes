@@ -1,0 +1,44 @@
+----------1º Criamos o repositório no GitHub, e clonamos
+ele localmente, para a criação da API.
+
+----------2º Criamos o package.json do projeto:
+    npm init -y
+
+----------3º Instalamos o JsonServer como dev dependence com o npm, a partir do repos
+https://github.com/typicode/json-server Com o comando:
+    npm i json-server -D
+
+----------4º  Criamos/Adicionamos a dB em .json com os dados que iremos fazer
+as requisições.
+
+----------5º Executamos o JsonServer na nossa dB com o comando:
+    json-server --watch NomeDaSuaDb.json
+
+----------6º Trocamos o "test" no objeto de "scrips" do package.json, pra:
+    "dev": "json-server --watch NomeDaSuaDb.json --port 3000"
+
+----------7º Adicionamos um server.js na pasta raiz com o código (DENTRO das aspas):
+    "
+    const jsonServer = require("json-server");
+    const server = jsonServer.create();
+    const router = jsonServer.router("NomeDaSuaDb.json");
+    const middlewares = jsonServer.defaults();
+    const port = process.env.PORT || 3000;
+
+    server.use(middlewares);
+    server.use(router);
+
+    server.listen(port);
+    "
+
+8º Fazemos o deploy pro Heroku sem mistério, e PRONTO!!! 
+acessamos nossa API Rest tranquilo!! 🤩😎😉 Podendo fazer qualquer tipo
+de requisições CRUD -> Post/Get/Put/Delete
+
+9º - Para nossa aplicação não hibernar/dormir em horário comum de uso, utilizamos
+o Kaffeine. Um website que oferece de forma totalmente gratuita, o serviço de acesso
+a nossa aplicação no Heroku, a cada 30min, evitando que ela durma. 
+Para utilizar essse serviço acesse: https://kaffeine.herokuapp.com/ e insira o nome da 
+sua aplicação no Heroku (O MSM NOME QUE APARECE NA SUA DASHBOARD -> https://dashboard.heroku.com/apps)
+Clique no botão -> "Give my app a caffeine shot every 30 minutes" e PRONTO!! 😉😎 
+Sua API ou aplicação não entrará mais em hibernação em horário comercial 😁

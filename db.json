@@ -1,9 +1,9 @@
 {
   "ToDos": [
     {
-      "id": 1,
       "text": "Lavar as roupas",
-      "done": true
+      "done": true,
+      "id": 1
     },
     {
       "text": "Varrer a casa",
